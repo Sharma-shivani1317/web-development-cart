@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booksluva Cart</title>
+
+    <style>
+        h1 {
+            background-color: rgba(169, 169, 169, 0.596);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .product-info {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 30px;
+        }
+
+        th {
+            text-align: center;
+            padding: 5px;
+            color: rgb(9, 10, 10);
+            background-color: rgba(169, 169, 169, 0.596);
+            font-weight: normal;
+        }
+
+        td {
+            padding: 10px 5px;
+        }
+
+        td input {
+            width: 40px;
+            height: 30px;
+            padding: 5px;
+        }
+
+        /product image/
+        td img {
+            width: 80px;
+            height: 90px;
+            margin-right: 10px;
+        }
+
+        /display of subtotal/
+        .Total-Price {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .Total-Price table {
+            border-top: 3px darkgray;
+            width: 100%;
+            margin-top: 5%;
+            max-width: 350px;
+        }
+
+        .Total-Price th {
+            text-align: center;
+        }
+
+        /table border/
+        table,
+        th,
+        td {
+            border: 1px solid rgba(169, 169, 169, 0.596)
+        }
+
+        /for return to home page/
+        .fas {
+            position: absolute;
+            right: 18px;
+            font-size: 25px;
+            color: rgba(109, 106, 106, 0.596);
+        }
+
+        .far {
+            position: absolute;
+            left: 18px;
+            font-size: 25px;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/835b060ae7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="first-container">
+
+        <a href=""><i class="fas fa-home">>cart</i></a>
+        <!--move to home-->
+        <h1>Cart </h1>
+        <table>
+            <!--table for displaying the products-->
+            <tr>
+                <th>PRODUCT</th>
+                <th>PRICE</th>
+                <th>QUANTITY</th>
+                <th>ITEM IN STOCK</th>
+                <th>SUBTOTAL</th>
+            </tr>
+            <tr>
+                <td>
+                    <a href=""><i class="far fa-window-close"></i></a>
+                    <!--remove product from cart-->
+                    <div class="product-info">
+                        <img src="C:\Users\admin\Pictures\book2.jpg">
+                        <div>
+                            <p>Applied Mathematics</p>
+                        </div>
+                    </div>
+                </td>
+                <td><small>Rs.200</small></td>
+                <td><input type="number" value="1"></td>
+                <!--quantity -->
+                <td>2</td>
+                <!--item in stock-->
+                <td>Rs.200</td>
+            </tr>
+            <tr>
+                <td><input type="text" value="apply coupoun code" style="width: 40%; height:30%;">
+                    <input type="button" value="APPLY COUPON" style="width: 20%; background-color: rgb(63, 82, 252);">
+                </td>
+                <td colspan="3"></td>
+                <!--coupon code-->
+                <td><input type="button" value="UPDATE CART" style="width:60%; background-color: rgb(63, 82, 252);"></td>
+                <!--cart update-->
+            </tr>
+
+        </table>
+        <div class="Total-Price">
+            <table>
+                <tr>
+                    <th colspan="2">CART TOTALS</th>
+                </tr>
+                <tr>
+                    <td>Subtotal</td>
+                    <td id="cartSubtotalPrice">Rs.200</td>
+                </tr>
+                
+                <tr>
+                    <td>Discount</td>
+                    <td>Rs.0</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td id="cartTotalPrice">Rs.200</td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="proceed to checkout"
+                            style="width: 100%; background-color: rgb(9, 211, 201);"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
